@@ -4,8 +4,5 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "fallbacks": {
-    "404": "/index.html"
-  }
+  ]
 }
