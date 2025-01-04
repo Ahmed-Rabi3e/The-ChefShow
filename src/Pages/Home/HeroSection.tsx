@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section
-      className="relative h-[862px] w-full flex items-center justify-center bg-cover bg-center overflow-hidden border-b-2 border-b-gold-500 !rounded-b-[120px]"
+      className="relative h-[856px] w-full flex items-center justify-center bg-cover bg-center overflow-hidden border-b-2 border-b-gold-500 !rounded-b-[120px]"
       style={{
         backgroundImage: `url(${Hero})`,
       }}
