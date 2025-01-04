@@ -11,9 +11,6 @@ export default defineConfig({
       input: "/index.html",
     },
   },
-  server: {
-    historyApiFallback: true,
-  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
