@@ -18,7 +18,7 @@ const Header: React.FC = () => {
           {["Home", "About", "Contact", "Reservation"].map((item) => (
             <NavLink
               key={item}
-              to={`/${item.toLowerCase()}`}
+              to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
               className={({ isActive }) =>
                 isActive
                   ? "relative text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-[5px] after:rounded after:bg-gold-500 after:transition-all after:duration-300 after:transform after:translate-y-[22px]"
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
             (item) => (
               <NavLink
                 key={item}
-                to={`/${item.toLowerCase()}`}
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                 className={({ isActive }) =>
                   isActive
                     ? "text-gold-500 border-b-2 border-gold-500 py-2"

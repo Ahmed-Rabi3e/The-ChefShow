@@ -1,5 +1,13 @@
+import LandingPage from "../Reservation/LandingPage";
+import ContactForm from "./ContactForm";
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <div>
+      <LandingPage label="Contact Us" />
+      <ContactForm />
+    </div>
+  );
 };
 
 export default Contact;

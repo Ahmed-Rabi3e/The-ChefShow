@@ -1,5 +1,11 @@
+import LandingPage from "../Reservation/LandingPage";
+
 const About = () => {
-  return <div>About</div>;
+  return (
+    <div>
+      <LandingPage label="About" />
+    </div>
+  );
 };
 
 export default About;

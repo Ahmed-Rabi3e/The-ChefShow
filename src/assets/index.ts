@@ -3,6 +3,10 @@ import Hero from "./Hero.webp";
 
 import user from "./user.png";
 
+import landing from "./Landing.png";
+
+import contact from "./contact-us.webp";
+
 import icon from "./barbecue-steak.png";
 import icon_1 from "./fork-knife.png";
 import icon_2 from "./champagne-party.png";
@@ -32,6 +36,8 @@ export {
   logo,
   Hero,
   user,
+  landing,
+  contact,
   icon,
   icon_1,
   icon_2,
