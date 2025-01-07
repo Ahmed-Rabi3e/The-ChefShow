@@ -9,7 +9,7 @@ import {
   Special_7,
   Special_8,
 } from "../../assets";
-import TitleHeading from "../../components/TitleHeading";
+import TitleHeading from "../../Components/TitleHeading";
 
 const SpecialMenu = () => {
   const menuItems = [

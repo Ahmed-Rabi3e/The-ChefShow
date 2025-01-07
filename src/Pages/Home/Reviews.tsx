@@ -1,6 +1,6 @@
-import { Testimonials } from "@/components/Testimonials";
+import { Testimonials } from "@/Components/Testimonials";
 import { icon_4 } from "../../assets";
-import TitleHeading from "../../components/TitleHeading";
+import TitleHeading from "../../Components/TitleHeading";
 
 const Reviews = () => {
   return (
