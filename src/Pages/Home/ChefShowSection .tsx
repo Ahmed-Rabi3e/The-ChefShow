@@ -1,5 +1,5 @@
 import { Chefshow_1, Chefshow_2, icon_2 } from "../../assets";
-import TitleHeading from "../../Components/TitleHeading";
+import TitleHeading from "../../components/TitleHeading";
 
 const stats = [
   {

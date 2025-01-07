@@ -1,12 +1,12 @@
 import { Hero, icon } from "@/assets";
-import TitleHeading from "@/Components/TitleHeading";
+import TitleHeading from "@/components/TitleHeading";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/Components/ui/carousel";
+} from "@/components/ui/carousel";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 export function CarouselDemo() {

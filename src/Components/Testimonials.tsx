@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
-import Marquee from "@/Components/ui/marquee";
 import { user } from "@/assets/index";
+import Marquee from "@/components/ui/marquee";
+import { cn } from "@/lib/utils";
 
 interface Review {
   name: string;

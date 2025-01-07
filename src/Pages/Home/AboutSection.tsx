@@ -1,5 +1,5 @@
 import { About_1, About_2, About_3, icon_1 } from "../../assets";
-import TitleHeading from "../../Components/TitleHeading";
+import TitleHeading from "../../components/TitleHeading";
 
 const AboutSection = () => {
   const stats = [

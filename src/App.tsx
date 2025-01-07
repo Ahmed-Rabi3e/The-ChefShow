@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./Components/Layout";
-import Home from "./Pages/Home/Home";
-import Succusfull from "./Pages/Succus";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
 import About from "./Pages/About/About";
-import Reservation from "./Pages/Reservation/Reservation";
 import Contact from "./Pages/Contact/Contact";
+import Home from "./Pages/Home/Home";
+import Reservation from "./Pages/Reservation/Reservation";
+import Succusfull from "./Pages/Succus";
 
 function App() {
   return (

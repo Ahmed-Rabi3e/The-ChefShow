@@ -1,5 +1,5 @@
 import { icon_5, Support } from "@/assets";
-import TitleHeading from "@/Components/TitleHeading";
+import TitleHeading from "@/components/TitleHeading";
 import React from "react";
 
 const SupportSection: React.FC = () => {
