@@ -56,22 +56,20 @@ const Header: React.FC = () => {
         }`}
       >
         <nav className="bg-black/60 backdrop-blur-md px-4 py-3 flex flex-col space-y-2">
-          {["Home", "About", "Experience", "Menu", "Reservation"].map(
-            (item) => (
-              <NavLink
-                key={item}
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className={({ isActive }) =>
-                  isActive
-                    ? "text-gold-500 border-b-2 border-gold-500 py-2"
-                    : "hover:text-gray-300 py-2"
-                }
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item}
-              </NavLink>
-            )
-          )}
+          {["Home", "About", "Contact", "Reservation"].map((item) => (
+            <NavLink
+              key={item}
+              to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-gold-500 border-b-2 border-gold-500 py-2"
+                  : "hover:text-gray-300 py-2"
+              }
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {item}
+            </NavLink>
+          ))}
           <NavLink
             to="/reservation"
             className="bg-gold-500 text-white px-4 py-2 font-normal text-center"

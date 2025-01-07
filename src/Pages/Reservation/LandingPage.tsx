@@ -44,7 +44,7 @@ const LandingPage = ({ label }: LandingProps) => {
           src={landing}
           alt="Landing"
           loading="lazy"
-          className="absolute inset-0 w-full h-full object-center"
+          className="hidden md:block absolute inset-0 w-full h-full object-center"
         />
         <div className="relative z-10 text-center px-6">
           <h1 className="text-4xl md:text-6xl font-normal font-restora_light uppercase leading-tight mb-4">

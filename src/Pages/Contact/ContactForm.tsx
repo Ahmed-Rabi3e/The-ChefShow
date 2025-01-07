@@ -130,6 +130,7 @@ const ContactForm = () => {
         <img
           src={contact}
           alt="Contact Us"
+          loading="lazy"
           className="object-cover w-full h-full"
         />
       </div>

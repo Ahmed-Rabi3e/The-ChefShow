@@ -7,6 +7,8 @@ import landing from "./Landing.png";
 
 import contact from "./contact-us.webp";
 
+import map from "./map.webp";
+
 import icon from "./barbecue-steak.png";
 import icon_1 from "./fork-knife.png";
 import icon_2 from "./champagne-party.png";
@@ -38,6 +40,7 @@ export {
   user,
   landing,
   contact,
+  map,
   icon,
   icon_1,
   icon_2,
