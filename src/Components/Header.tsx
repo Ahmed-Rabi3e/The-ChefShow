@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-main_black backdrop-blur-2xl font-normal text-white z-50 border-b border-gold-500 font-jakarta">
+    <header className="bg-main_black/25 backdrop-blur-3xl sticky top-0 font-normal text-white z-50 border-b border-gold-500 font-jakarta">
       <div className="container mx-auto flex items-center justify-between gap-5 px-4 my-3">
         {/* Logo */}
         <div className="flex items-center">
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
           isMenuOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
-        <nav className="bg-black/60 backdrop-blur-md px-4 py-3 flex flex-col space-y-2">
+        <nav className="bg-main_black backdrop-blur-md px-4 py-3 flex flex-col space-y-2">
           {["Home", "About", "Contact", "Reservation"].map((item) => (
             <NavLink
               key={item}

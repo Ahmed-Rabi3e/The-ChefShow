@@ -34,6 +34,7 @@ export function CarouselDemo() {
               <div
                 className="relative w-full h-full flex items-center justify-center bg-cover bg-center"
                 style={{ backgroundImage: `url(${slide.image})` }}
+                key={slide.id}
               >
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/75" />

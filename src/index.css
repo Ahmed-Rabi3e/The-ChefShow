@@ -24,9 +24,39 @@
   font-weight: 400;
   font-style: italic;
 }
+
 body {
   margin: 0;
 }
+
+.curve .svg,
+.curve .background {
+  position: fixed;
+  height: calc(100vh + 600px);
+  width: 100vw;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+}
+
+.background {
+  @apply bg-gold-500;
+  transition: opacity 1s linear 0.2s;
+  z-index: 1000;
+}
+
+.route {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  color: white;
+  font-size: 46px;
+  z-index: 3;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -55,6 +85,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -82,10 +113,12 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

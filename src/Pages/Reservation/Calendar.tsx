@@ -94,7 +94,7 @@ const Calendar = () => {
         ))}
         {!isExpanded && (
           <button
-            className="col-span-3 md:col-span-1 p-4 bg-gold-500 text-white font-restora_light text-2xl"
+            className="w-[120px] h-[116px] p-4 bg-gold-500 text-white font-restora_light text-2xl"
             onClick={() => setIsExpanded(true)}
           >
             MORE
