@@ -1,6 +1,5 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
-import Curve from "./transition/Curve"; // Import Curve component
+import Curve from "./transition/Curve";
 import Header from "./Header";
 import Footer from "./Footer";
 

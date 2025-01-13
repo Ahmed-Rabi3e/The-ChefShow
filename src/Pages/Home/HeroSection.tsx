@@ -60,16 +60,16 @@ export function CarouselDemo() {
         ))}
       </CarouselContent>
       <CarouselPrevious
-        className="absolute  !text-6xl top-2/3 md:top-1/2 left-8 md:left-12 z-20 text-white bg-black/50 rounded-full h-10 w-10 md:h-20 md:w-20 border-[1px] border-white hover:border-gold-500 hover:text-white hover:bg-gold-500"
+        className="absolute top-2/3 md:top-1/2 left-8 md:left-12 z-20 text-white bg-black/50 rounded-full h-10 w-10 md:h-20 md:w-20 border-[1px] border-white hover:border-gold-500 hover:text-white hover:bg-gold-500"
         aria-label="Previous"
       >
-        <GoArrowLeft className="text-2xl md:text-4xl" />
+        <GoArrowLeft />
       </CarouselPrevious>
       <CarouselNext
         className="absolute top-2/3 md:top-1/2 right-8 md:right-12 z-20 text-white bg-black/50 rounded-full h-10 w-10 md:h-20 md:w-20 border-[1px] border-white hover:border-gold-500 hover:text-white hover:bg-gold-500"
         aria-label="Next"
       >
-        <GoArrowRight className="text-2xl md:text-4xl" />
+        <GoArrowRight />
       </CarouselNext>
     </Carousel>
   );

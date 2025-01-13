@@ -1,21 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { logo } from "../assets";
 import { RiMenu3Fill } from "react-icons/ri";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBlurred, setIsBlurred] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setIsBlurred(true);
+      } else {
+        setIsBlurred(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="bg-main_black/25 backdrop-blur-3xl sticky top-0 font-normal text-white z-50 border-b border-gold-500 font-jakarta">
+    <header
+      className={`fixed left-0 w-full z-50 border-b border-gold-500 font-jakarta transition-all duration-500 ${
+        isBlurred
+          ? "bg-black backdrop-blur-[40px] bg-opacity-25"
+          : "bg-black backdrop-blur-none bg-opacity-0"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between gap-5 px-4 my-3">
         {/* Logo */}
         <div className="flex items-center">
           <img src={logo} alt="Logo" loading="lazy" className="h-12" />
         </div>
 
+        {/* Navigation */}
         <nav className="hidden md:flex space-x-10">
-          {["Home", "About", "Contact", "Reservation"].map((item) => (
+          {["Home", "PastShows", "Contact", "Reservation"].map((item) => (
             <NavLink
               key={item}
               to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -30,6 +51,8 @@ const Header: React.FC = () => {
             </NavLink>
           ))}
         </nav>
+
+        {/* Reservation Button */}
         <NavLink
           to="/reservation"
           className="hidden md:block bg-gold-500 px-4 py-2 text-white font-normal"
@@ -56,7 +79,7 @@ const Header: React.FC = () => {
         }`}
       >
         <nav className="bg-main_black backdrop-blur-md px-4 py-3 flex flex-col space-y-2">
-          {["Home", "About", "Contact", "Reservation"].map((item) => (
+          {["Home", "PastShows", "Contact", "Reservation"].map((item) => (
             <NavLink
               key={item}
               to={item === "Home" ? "/" : `/${item.toLowerCase()}`}

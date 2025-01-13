@@ -6,7 +6,7 @@ import { curve, text, translate } from "./anime";
 // Define the routes with proper types
 const routes: Record<string, string> = {
   "/": "Home",
-  "/about": "About",
+  "/pastshows": "Past Shows",
   "/contact": "Contact",
   "/reservation": "Reservation",
 };

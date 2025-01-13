@@ -37,14 +37,14 @@ const LandingPage = ({ label }: LandingProps) => {
   };
 
   return (
-    <div className="h-[415px] bg-main_black flex flex-col border-b border-gold-500 rounded-b-[120px] items-center justify-center text-white">
+    <div className="h-[550px] bg-main_black flex flex-col border-b border-gold-500 rounded-b-[120px] items-center justify-center text-white">
       {/* Transparent Image */}
       <div className="relative w-full h-full flex justify-center items-center">
         <img
           src={landing}
           alt="Landing"
           loading="lazy"
-          className="hidden md:block absolute inset-0 w-full h-full object-center"
+          className="hidden md:block absolute top-20 inset-0 w-full h-full object-center"
         />
         <div className="relative z-10 text-center px-6">
           <h1 className="text-4xl md:text-6xl font-normal font-restora_light uppercase leading-tight mb-4">
