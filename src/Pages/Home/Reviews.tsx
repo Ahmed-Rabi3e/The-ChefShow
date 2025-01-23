@@ -7,7 +7,7 @@ const Reviews = () => {
     <section className="bg-main_black text-white py-16">
       <div className="max-w-7xl mx-auto">
         <TitleHeading label="testimonials" img={icon_4} showIcons />
-        <h2 className="text-center mx-auto text-4xl md:text-6xl font-normal mb-14 uppercase w-full md:max-w-6xl font-restora_light">
+        <h2 className="text-center mx-auto text-2xl md:text-6xl font-normal px-4 md:px-0 mb-8 md:mb-14 uppercase w-full md:max-w-6xl font-restora_light">
           The reviews of customers when coming to our restaurant!
         </h2>
       </div>

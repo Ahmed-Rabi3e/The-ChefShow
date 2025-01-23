@@ -22,7 +22,7 @@ const ReservationForm = () => {
   };
 
   return (
-    <div className="basis-1/3 h-fit py-8 px-6 bg-main_black border border-gold-500 text-white my-10 md:my-20 md:sticky md:top-0">
+    <div className="basis-1/3 h-fit py-8 px-6 bg-main_black border border-gold-500 text-white mt-4 mb-16 md:my-20 md:sticky md:top-[92px]">
       <h1 className="capitalize font-restora_light text-4xl">
         enter your data
       </h1>

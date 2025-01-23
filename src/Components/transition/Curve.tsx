@@ -58,7 +58,7 @@ export default function Curve({ children }: CurveProps) {
 
       {/* Route Title */}
       <motion.p
-        className="absolute left-1/2 top-[40%] uppercase font-restora_light text-white text-6xl z-[1001] transform -translate-x-1/2 text-center"
+        className="absolute left-1/2 top-[40%] uppercase font-restora_thin text-white text-4xl md:text-6xl z-[1001] transform -translate-x-1/2 text-center"
         {...anim(text)}
       >
         {routes[location.pathname] || "Unknown"}

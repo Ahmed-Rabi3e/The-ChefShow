@@ -67,7 +67,7 @@ const Calendar = () => {
         {(isExpanded ? expandedDays : days).map((day) => (
           <div
             key={day.id}
-            className={`p-2 text-center border-2 border-gold-500 cursor-pointer w-[120px] h-[116px] ${
+            className={`p-2 text-center border-2 border-gold-500 cursor-pointer w-[120px] h-[116px] transition-all duration-300 ${
               selectedDate === day.id
                 ? "bg-gold-500 text-white"
                 : "hover:border-white"

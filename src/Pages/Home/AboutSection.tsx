@@ -33,7 +33,7 @@ const AboutSection = () => {
     <section className="bg-main_black text-white py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <TitleHeading label="All Day Experience" img={icon_1} showIcons />
-        <h2 className="text-center text-4xl md:text-6xl font-normal mb-6 font-restora_light">
+        <h2 className="text-center text-3xl md:text-6xl font-normal mb-6 font-restora_light">
           ABOUT THE CHEF SHOW
         </h2>
         <p className="text-center text-sm md:text-base max-w-2xl mx-auto mb-12">

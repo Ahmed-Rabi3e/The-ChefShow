@@ -67,7 +67,7 @@ const SpecialMenu = () => {
     <section className="bg-main_black text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <TitleHeading label="Special Offers" img={icon_3} showIcons />
-        <h2 className="text-center mx-auto text-4xl md:text-6xl font-normal mb-14 uppercase max-w-3xl font-restora_light">
+        <h2 className="text-center mx-auto text-3xl md:text-6xl font-normal mb-8 md:mb-14 uppercase max-w-3xl font-restora_light">
           the Special Menu
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

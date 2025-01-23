@@ -4,19 +4,19 @@ import { CiMail } from "react-icons/ci";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-main_black text-white py-12 px-6 md:px-16 pb-36 rounded- relative">
+    <footer className="bg-main_black text-white py-12 px-8 md:px-16 pb-36 relative">
       <div className="flex flex-col md:flex-row items-center">
         {/* Left Section */}
-        <div className="flex flex-col items-center md:items-start space-y-6 md:w-1/3">
+        <div className="flex flex-col items-start space-y-6 md:w-1/3">
           {/* Logo and Description */}
           <div>
             <img
               src={logo}
               loading="lazy"
               alt="Logo"
-              className="mb-6 h-14 mx-auto md:mx-0"
+              className="mb-6 h-20 mx-0"
             />
-            <p className="text-gray-400 text-sm max-w-sm">
+            <p className="text-gray-300 text-sm max-w-sm font-restora_thin">
               the chef show® is a female-driven, Egypt-based fashion brand,
               creating luxurious, empowering apparel for the modern woman.
               Experience elegance, confidence, and the celebration of every
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Decorative Border */}
-      <div className="absolute top-0 left-0 w-full h-full rounded-[140px] border-t border-gold-500 pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-full h-full rounded-[48px] md:rounded-[140px] border-t border-gold-500 pointer-events-none"></div>
     </footer>
   );
 };
