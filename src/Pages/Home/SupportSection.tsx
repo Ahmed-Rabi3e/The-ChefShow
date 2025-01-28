@@ -8,7 +8,7 @@ const SupportSection: React.FC = () => {
       {/* Text Content */}
       <div className="flex flex-col items-center text-center md:text-left md:w-1/2 space-y-2">
         <TitleHeading label="HELP & SUPPORT" img={icon_5} showIcons />
-        <div className="flex flex-col items-center space-y-2 md:space-y-4">
+        <div className="flex flex-col items-center space-y-1 md:space-y-4">
           <h2 className="text-2xl lg:text-6xl font-normal uppercase font-restora_light">
             Need Support?
           </h2>
@@ -16,7 +16,7 @@ const SupportSection: React.FC = () => {
             We’re Here to Help
           </h2>
         </div>
-        <p className="text-sm md:text-base text-gray-300 text-center !my-4 md:!my-8 max-w-2xl">
+        <p className="text-sm md:text-base text-gray-300 text-center !my-2 md:!my-8 max-w-2xl">
           Our Restaurant Offers A Stylish And Fun European Cafe-Restaurant
           Experience, Inspired By Executive Chef Chris Hill. The All Day Dining
           Menu Is A Reflection Of The Very Best Of The Season.

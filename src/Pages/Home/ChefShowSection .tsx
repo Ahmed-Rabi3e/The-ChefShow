@@ -19,7 +19,7 @@ const ChefShowSection = () => {
     <section className="bg-main_black text-white py-10 md:py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <TitleHeading label="All Day Experience" img={icon_2} showIcons />
-        <h2 className="text-center mx-auto text-2xl md:text-6xl font-normal mb-4 md:mb-6 uppercase max-w-4xl font-restora_light">
+        <h2 className="text-center mx-auto text-2xl md:text-5xl font-normal mb-2 md:mb-6 uppercase max-w-4xl font-restora_light">
           The perfect place for an exceptional experience
         </h2>
         <p className="text-center text-sm md:text-base max-w-2xl mx-auto mb-8 md:mb-12">

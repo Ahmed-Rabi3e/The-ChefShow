@@ -41,7 +41,7 @@ const Calendar = () => {
       <h1 className="text-5xl font-normal text-left font-restora_light mb-4">
         Pick Your Day
       </h1>
-      <div className="text-left pl-4 mb-6 flex gap-4 text-sm">
+      <div className="text-left pl-4 mb-6 flex gap-4 text-xs md:text-sm">
         <span className="relative uppercase text-gray-400 mr-4 before:absolute before:top-1.5 before:-left-4 before:rounded-full before:w-2 before:h-2 before:bg-red-500">
           Fully Booked
         </span>

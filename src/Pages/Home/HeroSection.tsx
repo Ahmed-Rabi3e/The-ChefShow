@@ -56,7 +56,7 @@ export function CarouselDemo() {
   return (
     <Carousel
       setApi={(apiInstance) => setApi(apiInstance as CarouselApi)}
-      className="!w-full relative h-[662px] border-b-2 border-b-gold-500 overflow-hidden rounded-b-[48px] md:rounded-b-[120px]"
+      className="!w-full relative h-[650px] border-b-2 border-b-gold-500 overflow-hidden rounded-b-[48px] md:rounded-b-[120px]"
     >
       <CarouselContent>
         {slides.map((slide) => (
@@ -88,11 +88,11 @@ export function CarouselDemo() {
         ))}
       </CarouselContent>
       <CarouselPrevious
-        className="absolute top-[69%] md:top-1/2 left-8 md:left-12 z-20 text-white bg-black/50 rounded-full h-10 w-10 md:h-20 md:w-20 border-[1px] border-white hover:border-gold-500 hover:text-white hover:bg-gold-500"
+        className="absolute top-1/2 left-12 z-20 text-white bg-black/50 rounded-full h-20 w-20 border-[1px] border-white hover:border-gold-500 hover:text-white hover:bg-gold-500 hidden md:flex"
         aria-label="Previous"
       />
       <CarouselNext
-        className="absolute top-[69%] md:top-1/2 right-8 md:right-12 z-20 text-white bg-black/50 rounded-full h-10 w-10 md:h-20 md:w-20 border-[1px] border-white hover:border-gold-500 hover:text-white hover:bg-gold-500"
+        className="absolute top-1/2 right-12 z-20 text-white bg-black/50 rounded-full h-20 w-20 border-[1px] border-white hover:border-gold-500 hover:text-white hover:bg-gold-500 hidden md:flex"
         aria-label="Next"
       />
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">

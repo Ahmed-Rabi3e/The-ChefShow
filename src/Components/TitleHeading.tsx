@@ -8,8 +8,8 @@ interface titleProps {
 
 const TitleHeading = ({ label, showIcons = true, img }: titleProps) => {
   return (
-    <div className="flex flex-col justify-center items-center mb-6">
-      <img src={img} alt="icon" loading="lazy" className="w-12 h-12 mb-4" />
+    <div className="flex flex-col justify-center items-center mb-3 md:mb-6">
+      <img src={img} alt="icon" loading="lazy" className="w-12 h-12 mb-2 md:mb-4" />
       <div className="flex items-center gap-3">
         {showIcons && (
           <LiaSquareFullSolid size={10} className="rotate-45 fill-gold-500" />
