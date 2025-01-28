@@ -11,6 +11,8 @@ import Home from "./Pages/Home/Home";
 import Reservation from "./Pages/Reservation/Reservation";
 import Succusfull from "./Pages/Succus";
 import TimelineDemo from "./Pages/Past Show/PastShow";
+import Signup from "./Pages/Auth/SignUp";
+import Login from "./Pages/Auth/Login";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -27,6 +29,10 @@ function AnimatedRoutes() {
         </Route>
         <Route element={<Layout hideHeader />}>
           <Route path="/succuspage" element={<Succusfull />} />
+        </Route>
+        <Route element={<Layout hideFooter hideHeader />}>
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
     </AnimatePresence>

@@ -9,9 +9,10 @@ const routes: Record<string, string> = {
   "/pastshows": "Past Shows",
   "/contact": "Contact",
   "/reservation": "Reservation",
+  "/signup": "Sign Up",
+  "/login": "Login",
 };
 
-// Define the animation function type
 const anim = (variants: Variants) => ({
   variants,
   initial: "initial",
@@ -19,7 +20,6 @@ const anim = (variants: Variants) => ({
   exit: "exit",
 });
 
-// Props for Curve component
 interface CurveProps {
   children: ReactNode;
 }

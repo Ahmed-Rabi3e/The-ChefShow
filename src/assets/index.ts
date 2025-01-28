@@ -1,5 +1,7 @@
 import logo from "./Logo.png";
+import small_logo from "./small_logo.png";
 import Hero from "./Hero.webp";
+import Noise_Image from "./Noise.png";
 
 import user from "./user.png";
 
@@ -36,6 +38,8 @@ import Support from "./image_7.png";
 
 export {
   logo,
+  small_logo,
+  Noise_Image,
   Hero,
   user,
   landing,
