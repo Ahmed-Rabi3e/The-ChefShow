@@ -1,14 +1,11 @@
-import { useState } from "react";
 import { Noise_Image, small_logo } from "@/assets";
+import { useState } from "react";
+import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import CustomCheckbox from "@/Components/CustomCheckBox";
 
-const Login = () => {
+const ForgetPassword = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
     email: "",
-    phoneNumber: "",
-    password: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,9 +30,9 @@ const Login = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-[1300px] h-fit bg-main_black border-2 border-gold-500 flex">
-        {/* Left side - Login form */}
-        <div className="w-full md:w-1/2 px-4 md:px-10 py-8 flex flex-col">
+      <div className="w-[664px] h-fit bg-main_black border-2 border-gold-500 flex">
+        {/* Left side - ForgetPassword form */}
+        <div className="w-full px-4 md:px-10 py-8 flex flex-col">
           <img
             src={small_logo}
             alt="smalllogo"
@@ -45,11 +42,8 @@ const Login = () => {
 
           {/* Form */}
           <h1 className="text-2xl md:text-[40px] font-restora_light uppercase mt-6 text-center font-bold">
-            Login to your account
+            Forget Password
           </h1>
-          <h3 className="text-sm md:text-base font-jakarta capitalize my-2 text-center mb-10 ">
-            Your Gateway to Exclusive Deals and Offers!
-          </h3>
           <form onSubmit={handleSubmit} className="space-y-4 mt-4">
             {/* Email */}
             <div>
@@ -70,56 +64,28 @@ const Login = () => {
                 required
               />
             </div>
-
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-base capitalize font-normal mb-1 text-white"
-              >
-                Password
-              </label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter Your Password"
-                value={formData.password}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-main_black border border-gold-500 outline-none placeholder:text-sm text-white placeholder:font-jakarta placeholder:text-gray-500"
-                required
-              />
-            </div>
-            {/* Remmber Me  */}
-            <div className="flex items-center justify-between">
-              <CustomCheckbox label="Remember me" />
-              <Link to="/" className="text-gold-500 text-base">
-                Forgot Password?
-              </Link>
-            </div>
             {/* Submit Button */}
             <div>
               <button
                 type="submit"
                 className="w-full mt-6 text-xl bg-gold-500 py-3 font-medium font-jakarta capitalize text-black"
               >
-                Login
+                Reset password
               </button>
             </div>
           </form>
 
-          <p className="text-base text-white mt-6 text-center">
-            Don’t have an account?{" "}
-            <Link to="/signup" className="text-gold-500 font-semibold">
-              Create an account
-            </Link>
-          </p>
+          <Link
+            to="/"
+            className="text-white text-base font-semibold flex items-center justify-center gap-1.5 mt-4"
+          >
+            <BsArrowLeft className="text-xl" />
+            Back to login
+          </Link>
         </div>
-
-        {/* Right side - Background image & Card */}
-        <div className="hidden md:block w-1/2 bg-gold-500 text-white relative p-6"></div>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default ForgetPassword;

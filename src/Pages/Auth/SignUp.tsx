@@ -32,9 +32,9 @@ const Signup = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-[1300px] h-[830px] bg-main_black border-2 border-gold-500 flex">
+      <div className="w-[1300px] h-fit bg-main_black border-2 border-gold-500 flex">
         {/* Left side - Signup form */}
-        <div className="w-full md:w-1/2 px-10 py-8 flex flex-col">
+        <div className="w-full md:w-1/2 px-4 md:px-10 py-8 flex flex-col">
           <img
             src={small_logo}
             alt="smalllogo"
@@ -43,7 +43,7 @@ const Signup = () => {
           />
 
           {/* Form */}
-          <h1 className="text-[40px] font-restora_light uppercase mt-6 mb-10 text-center font-bold">
+          <h1 className="text-3xl md:text-[40px] font-restora_light uppercase mt-6 mb-6 md:mb-10 text-center font-bold">
             Create account
           </h1>
           <form onSubmit={handleSubmit} className="space-y-4 mt-4">

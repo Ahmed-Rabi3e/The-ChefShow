@@ -13,6 +13,8 @@ import Succusfull from "./Pages/Succus";
 import TimelineDemo from "./Pages/Past Show/PastShow";
 import Signup from "./Pages/Auth/SignUp";
 import Login from "./Pages/Auth/Login";
+import ForgetPassword from "./Pages/Auth/ForgetPassword";
+import ResetPassword from "./Pages/Auth/ResetPassword";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -33,6 +35,8 @@ function AnimatedRoutes() {
         <Route element={<Layout hideFooter hideHeader />}>
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgetpassword" element={<ForgetPassword />} />
+          <Route path="/resetpassword" element={<ResetPassword />} />
         </Route>
       </Routes>
     </AnimatePresence>
