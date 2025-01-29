@@ -11,6 +11,8 @@ const routes: Record<string, string> = {
   "/reservation": "Reservation",
   "/signup": "Sign Up",
   "/login": "Login",
+  "/forgetpassword": "Forget Password",
+  "/resetpassword": "Reset Password",
 };
 
 const anim = (variants: Variants) => ({
