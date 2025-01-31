@@ -28,7 +28,7 @@ const Calendar = () => {
     ...days,
     ...days.map((day) => ({
       ...day,
-      id: day.id + 9, // Mock IDs for expanded data
+      id: day.id + 9,
     })),
   ];
 
@@ -37,8 +37,8 @@ const Calendar = () => {
   };
 
   return (
-    <div className="basis-2/3 p-8 bg-main_black border border-gold-500 text-white max-w-3xl my-20">
-      <h1 className="text-5xl font-normal text-left font-restora_light mb-4">
+    <div className=" basis-2/3 p-4 md:p-8 bg-main_black border border-gold-500 text-white max-w-[820px]  my-20">
+      <h1 className="text-3xl md:text-5xl font-normal text-left font-restora_light mb-4">
         Pick Your Day
       </h1>
       <div className="text-left pl-4 mb-6 flex gap-4 text-xs md:text-sm">
@@ -63,11 +63,11 @@ const Calendar = () => {
           <FaArrowRight />
         </button>
       </div>
-      <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 place-items-center md:grid-cols-5 gap-6">
         {(isExpanded ? expandedDays : days).map((day) => (
           <div
             key={day.id}
-            className={`p-2 text-center border-2 border-gold-500 cursor-pointer w-[120px] h-[116px] transition-all duration-300 ${
+            className={`p-2 text-center border-2 border-gold-500 cursor-pointer w-[145px] h-[130px] flex flex-col items-center justify-center transition-all duration-300 ${
               selectedDate === day.id
                 ? "bg-gold-500 text-white"
                 : "hover:border-white"
@@ -94,7 +94,7 @@ const Calendar = () => {
         ))}
         {!isExpanded && (
           <button
-            className="w-[120px] h-[116px] p-4 bg-gold-500 text-white font-restora_light text-2xl"
+            className="w-[145px] h-[130px] p-4 bg-gold-500 text-white font-restora_light text-2xl"
             onClick={() => setIsExpanded(true)}
           >
             MORE
@@ -103,10 +103,10 @@ const Calendar = () => {
       </div>
       {isExpanded && (
         <button
-          className="mt-8 px-6 py-2 bg-gold-500 text-white font-semibold mx-auto block"
+          className="w-[145px] h-[130px] p-4 bg-gold-500 text-white font-restora_light text-2xl mt-6 ml-4 md:-ml-2"
           onClick={() => setIsExpanded(false)}
         >
-          Show Less
+          Less
         </button>
       )}
     </div>

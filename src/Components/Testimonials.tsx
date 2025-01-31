@@ -95,7 +95,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
 // Testimonials Component
 export const Testimonials: React.FC = () => {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+    <div className="container mx-auto relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review, index) => (
           <ReviewCard key={`${review.username}-${index}`} {...review} />

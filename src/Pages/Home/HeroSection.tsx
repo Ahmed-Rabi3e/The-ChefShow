@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/Components/ui/carousel";
+import { motion } from "framer-motion";
 
 type CarouselApi = {
   selectedScrollSnap: () => number;
@@ -61,8 +62,13 @@ export function CarouselDemo() {
       <CarouselContent>
         {slides.map((slide) => (
           <CarouselItem key={slide.id}>
-            <div
-              className="relative w-full h-[70vh] flex items-center justify-center bg-cover bg-center"
+            <motion.div
+              initial={{ opacity: 0, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, filter: "blur(0px)" }}
+              viewport={{ once: true, amount: 0.2 }}
+              exit={{ opacity: 0, filter: "blur(10px)" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="relative w-full h-[650px] flex items-center justify-center bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               {/* Overlay */}
@@ -83,7 +89,7 @@ export function CarouselDemo() {
                   Reservation
                 </button>
               </div>
-            </div>
+            </motion.div>
           </CarouselItem>
         ))}
       </CarouselContent>

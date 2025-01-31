@@ -6,7 +6,7 @@ const Reservation = () => {
   return (
     <div>
       <LandingPage label="Reservation" />
-      <div className="flex flex-col md:flex-row lg:flex-row justify-center mx-2 gap-0 md:gap-8">
+      <div className="container mx-auto flex flex-col md:flex-row lg:flex-row justify-center gap-0 md:gap-8">
         <Calendar />
         <ReservationForm />
       </div>

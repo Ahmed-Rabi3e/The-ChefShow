@@ -4,7 +4,7 @@ import React from "react";
 
 const SupportSection: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center gap-3 bg-main_black text-white py-12 px-6 my-16 md:px-16">
+    <section className="container mx-auto flex flex-col md:flex-row items-center gap-3 bg-main_black text-white py-12 px-6 my-16 md:px-16">
       {/* Text Content */}
       <div className="flex flex-col items-center text-center md:text-left md:w-1/2 space-y-2">
         <TitleHeading label="HELP & SUPPORT" img={icon_5} showIcons />

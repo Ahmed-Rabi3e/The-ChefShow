@@ -25,13 +25,13 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between bg-main_black border border-gold-500 overflow-hidden mx-6 my-36">
+    <div className="container mx-auto w-full h-[795px] flex flex-col md:flex-row items-center justify-between bg-main_black border border-gold-500 overflow-hidden my-36">
       {/* Form Section */}
-      <div className="w-full md:w-1/2 p-8 md:p-10 bg-main_black text-white">
-        <h1 className="text-3xl md:text-5xl font-restora_light mb-2 capitalize">
+      <div className="w-full md:w-1/2 p-4 md:p-10 bg-main_black text-white">
+        <h1 className="text-4xl md:text-5xl font-restora_light mb-2 mt-4 capitalize">
           Contact us
         </h1>
-        <p className="text-lg text-gray-300 mb-6 max-w-lg">
+        <p className="text-sm md:text-lg text-gray-300 mb-6 max-w-lg">
           Hello! Do you have any questions or suggestions about this site, or
           just want to say Hi? Send a message using the below form. I will get
           back to you as soon as possible.

@@ -61,12 +61,20 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Reservation Button */}
-        <NavLink
-          to="/reservation"
-          className="hidden uppercase text-sm md:block bg-gold-500 px-4 py-2 text-white font-normal"
-        >
-          Reservation
-        </NavLink>
+        <div className="flex items-center gap-2">
+          <NavLink
+            to="/reservation"
+            className="hidden uppercase text-sm md:block bg-gold-500 px-4 py-2 text-white font-normal"
+          >
+            Reservation
+          </NavLink>
+          <NavLink
+            to="/login"
+            className="hidden uppercase text-sm md:block bg-transparent border border-gold-500 px-4 py-2 text-white font-normal"
+          >
+            Login
+          </NavLink>
+        </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
@@ -100,6 +108,12 @@ const Header: React.FC = () => {
                   className="uppercase text-sm text-center md:block bg-gold-500 px-4 py-3 mt-4 text-white font-normal"
                 >
                   Reservation
+                </Link>
+                <Link
+                  to="/login"
+                  className="uppercase text-sm text-center block bg-transparent border border-gold-500 px-4 py-2 text-white font-normal"
+                >
+                  Login
                 </Link>
               </SheetFooter>
             </SheetContent>
