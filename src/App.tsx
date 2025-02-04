@@ -18,6 +18,7 @@ import Succusfull from "./Pages/Succus";
 import AccountDetails from "./Pages/Account/AccountDetails";
 import AccountSettings from "./Pages/Account/AccountSettings";
 import MyBooking from "./Pages/Account/MyBooking";
+import OTPVerification from "./Pages/Auth/OTPVerification";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -45,6 +46,7 @@ function AnimatedRoutes() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgetpassword" element={<ForgetPassword />} />
+          <Route path="/otp-verification" element={<OTPVerification />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
         </Route>
       </Routes>
