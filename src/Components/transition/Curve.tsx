@@ -9,6 +9,8 @@ const routes: Record<string, string> = {
   "/pastshows": "Past Shows",
   "/contact": "Contact",
   "/reservation": "Reservation",
+  "/account/details": "Account Settings",
+  "/account/booking": "Account Booking",
   "/signup": "Sign Up",
   "/login": "Login",
   "/forgetpassword": "Forget Password",
