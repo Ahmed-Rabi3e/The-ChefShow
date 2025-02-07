@@ -2,6 +2,7 @@ import { useState } from "react";
 import { EditDialog } from "../../Components/Dialog";
 import { Input } from "@/Components/ui/input";
 import { Label } from "@/Components/ui/label";
+import { motion } from "framer-motion";
 
 export default function AccountDetails() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -164,7 +165,12 @@ export default function AccountDetails() {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
       <h2 className="relative text-4xl font-restora_light mb-8 pb-2 text-white">
         Personal Information
         <div className="h-[1px] w-[284px] bg-gold-500 absolute bottom-0" />
@@ -251,6 +257,6 @@ export default function AccountDetails() {
       >
         {renderDialogContent()}
       </EditDialog>
-    </div>
+    </motion.div>
   );
 }

@@ -33,7 +33,7 @@ function AnimatedRoutes() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/reservation" element={<Reservation />} />
         </Route>
-        <Route element={<Layout />}>
+        <Route element={<Layout hideAnimation />}>
           <Route path="/account" element={<AccountSettings />}>
             <Route path="details" element={<AccountDetails />} />
             <Route path="booking" element={<MyBooking />} />

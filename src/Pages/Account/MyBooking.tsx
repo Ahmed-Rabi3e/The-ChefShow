@@ -1,10 +1,16 @@
 import { RiFileList2Line } from "react-icons/ri";
 import { Calendar } from "lucide-react";
 import { FiUser } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 export default function MyBooking() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
       <div className="flex items-center justify-between mb-8">
         <div className="relative text-4xl font-restora_light pb-2">
           My Bookings
@@ -47,6 +53,6 @@ export default function MyBooking() {
           VIEW BOOKING DETAILS
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
