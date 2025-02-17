@@ -1,9 +1,10 @@
 import { RiFileList2Line } from "react-icons/ri";
-import { Calendar } from "lucide-react";
+import { FaCalendar } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { IconType } from "react-icons/lib";
 
-export default function MyBooking() {
+export default function MyBooking(): JSX.Element {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -39,20 +40,16 @@ export default function MyBooking() {
         {/* Booking Information */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-4 font-jakarta">
           <BookingDetail
-            icon={<RiFileList2Line className="w-6 h-6 text-gold-500 mb-2" />}
+            Icon={RiFileList2Line}
             label="BOOKING REFERENCE"
             value="CHEF-BOOK-67389285"
           />
           <BookingDetail
-            icon={<Calendar className="w-6 h-6 text-gold-500 mb-2" />}
+            Icon={FaCalendar}
             label="BOOKING DATE"
             value="Jan 1, 2025"
           />
-          <BookingDetail
-            icon={<FiUser className="w-6 h-6 text-gold-500 mb-2" />}
-            label="NUMBER OF SEATS"
-            value="11"
-          />
+          <BookingDetail Icon={FiUser} label="NUMBER OF SEATS" value="11" />
         </div>
       </div>
 
@@ -64,15 +61,19 @@ export default function MyBooking() {
 }
 
 interface BookingDetailProps {
-  icon: React.ReactNode;
+  Icon: IconType;
   label: string;
   value: string;
 }
 
-const BookingDetail = ({ icon, label, value }: BookingDetailProps) => {
+const BookingDetail = ({
+  Icon,
+  label,
+  value,
+}: BookingDetailProps): JSX.Element => {
   return (
-    <div className="border border-gold-500 flex flex-col justify-center items-center w-full sm:w-[211px] h-[100px] p-3 sm:p-4">
-      {icon}
+    <div className="border border-gold-500 flex flex-col justify-center items-center w-full sm:w-[211px] h-[120px] p-3 sm:p-4">
+      <Icon className="text-gold-500 mb-2 w-6 h-6" />
       <p className="text-white text-sm sm:text-base">{label}</p>
       <p className="text-neutral-400 text-xs sm:text-sm mt-1">{value}</p>
     </div>
