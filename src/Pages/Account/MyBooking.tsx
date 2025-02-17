@@ -12,14 +12,12 @@ export default function MyBooking() {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="w-fit"
     >
-      {/* Header Section */}
       <div className="flex flex-col md:flex-row items-center justify-between mb-8">
         <div className="relative text-2xl md:text-4xl font-restora_light pb-2 mb-6 md:mb-0 text-center md:text-left">
           My Bookings
           <div className="h-[1px] w-[131px] bg-gold-500 absolute bottom-0 left-1/2 md:left-0 transform -translate-x-1/2 md:translate-x-0" />
         </div>
 
-        {/* Booking Toggle Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 border font-jakarta border-gold-500 p-1 w-full sm:w-auto">
           <button className="bg-gold-500 py-3 px-6 w-full sm:w-auto text-sm md:text-base">
             ACTIVE BOOKING
@@ -58,7 +56,6 @@ export default function MyBooking() {
         </div>
       </div>
 
-      {/* View Booking Button */}
       <button className="bg-gold-500 w-full py-3 sm:py-4 text-sm sm:text-base font-jakarta mt-4">
         VIEW BOOKING DETAILS
       </button>
@@ -66,8 +63,13 @@ export default function MyBooking() {
   );
 }
 
-/* Reusable BookingDetail Component */
-const BookingDetail = ({ icon, label, value }) => {
+interface BookingDetailProps {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+}
+
+const BookingDetail = ({ icon, label, value }: BookingDetailProps) => {
   return (
     <div className="border border-gold-500 flex flex-col justify-center items-center w-full sm:w-[211px] h-[100px] p-3 sm:p-4">
       {icon}
