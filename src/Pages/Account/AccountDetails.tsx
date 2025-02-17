@@ -29,7 +29,6 @@ export default function AccountDetails() {
   };
 
   const handleSave = () => {
-    // Here you would typically send the updated data to your backend
     console.log("Saving:", formData);
     handleClose();
   };
@@ -81,7 +80,7 @@ export default function AccountDetails() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="col-span-3 bg-main_black text-white border-gold-500"
+                className="col-span-3 bg-main_black text-white border-gold-500 text-xs"
               />
             </div>
             <div className="flex flex-col gap-4">
@@ -171,7 +170,7 @@ export default function AccountDetails() {
       exit={{ opacity: 0, y: 50 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <h2 className="relative text-4xl font-restora_light mb-8 pb-2 text-white">
+      <h2 className="relative text-2xl md:text-4xl font-restora_light mb-8 pb-2 text-white">
         Personal Information
         <div className="h-[1px] w-[284px] bg-gold-500 absolute bottom-0" />
       </h2>
@@ -182,7 +181,7 @@ export default function AccountDetails() {
           <div className="flex gap-4 relative">
             <input
               type="text"
-              className="flex-1 h-[54px] bg-main_black border outline-none p-3 placeholder:text-base placeholder:font-jakarta border-gold-500 text-white"
+              className="flex-1 h-[54px] bg-main_black border outline-none p-3 placeholder:text-sm md:placeholder:text-base placeholder:font-jakarta border-gold-500 text-white"
               placeholder={`${formData.firstName} ${formData.lastName}`}
               readOnly
             />
@@ -199,7 +198,7 @@ export default function AccountDetails() {
           <div className="flex gap-4 relative">
             <input
               type="text"
-              className="flex-1 h-[54px] bg-main_black border outline-none p-3 placeholder:text-base placeholder:font-jakarta border-gold-500 text-white"
+              className="flex-1 h-[54px] bg-main_black border outline-none p-3 placeholder:text-sm md:placeholder:text-base placeholder:font-jakarta border-gold-500 text-white"
               placeholder={formData.email}
               readOnly
             />
@@ -218,7 +217,7 @@ export default function AccountDetails() {
           <div className="flex gap-4 relative">
             <input
               type="text"
-              className="flex-1 h-[54px] bg-main_black border outline-none p-3 placeholder:text-base placeholder:font-jakarta border-gold-500 text-white"
+              className="flex-1 h-[54px] bg-main_black border outline-none p-3 placeholder:text-sm md:placeholder:text-base placeholder:font-jakarta border-gold-500 text-white"
               placeholder={formData.phone}
               readOnly
             />
