@@ -49,7 +49,6 @@ export function CarouselDemo() {
     api.on("select", onSelect);
 
     return () => {
-      // Cleanup listener if the component unmounts
       api.on("select", () => {});
     };
   }, [api]);

@@ -12,9 +12,9 @@ const SupportSection: React.FC = () => {
           <h2 className="text-2xl lg:text-6xl font-normal uppercase font-restora_light">
             Need Support?
           </h2>
-          <h2 className="text-2xl lg:text-6xl font-normal uppercase font-restora_light">
+          <h3 className="text-2xl lg:text-6xl font-normal uppercase font-restora_light">
             We’re Here to Help
-          </h2>
+          </h3>
         </div>
         <p className="text-sm md:text-base text-gray-300 text-center !my-2 md:!my-8 max-w-2xl">
           Our Restaurant Offers A Stylish And Fun European Cafe-Restaurant

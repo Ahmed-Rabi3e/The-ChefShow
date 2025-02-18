@@ -41,7 +41,6 @@ const LandingPage = ({ label }: LandingProps) => {
 
   return (
     <div className="h-[500px] bg-main_black flex flex-col border-b border-gold-500 rounded-b-[48px] md:rounded-b-[120px] items-center justify-center text-white">
-      {/* Transparent Image */}
       <div className="relative w-full h-full flex justify-center items-center">
         <img
           src={landing}
@@ -53,7 +52,6 @@ const LandingPage = ({ label }: LandingProps) => {
           <h1 className="text-4xl md:text-6xl font-normal font-restora_light uppercase leading-tight mb-4">
             {label}
           </h1>
-          {/* Breadcrumb */}
           <div className="mt-6 text-lg text-white">
             <p className="uppercase">{getBreadcrumbs()}</p>
           </div>
