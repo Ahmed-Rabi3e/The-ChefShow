@@ -1,124 +1,123 @@
 import { useState } from "react";
-import { Noise_Image, small_logo } from "@/assets";
 import { Link } from "react-router-dom";
-import CustomCheckbox from "@/Components/CustomCheckBox";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { LoginFormData, loginSchema } from "@/schemas/Login";
+import CustomInput from "@/Components/CustomInput";
+import small_logo from "@/assets/small_logo.png";
+import OverlayImages from "@/Components/AuthComponents/OverlayBack";
+
+import Hero from "@/assets/Hero.webp";
+import landing from "@/assets/Landing.png";
 
 const Login = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phoneNumber: "",
-    password: "",
+  const [showPassword] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<LoginFormData>({
+    mode: "onBlur",
+    resolver: zodResolver(loginSchema),
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: name === "quantity" ? parseInt(value, 10) || 0 : value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form Data Submitted: ", formData);
+  const onSubmit: SubmitHandler<LoginFormData> = (data) => {
+    console.log("Submitting Login....:", data);
   };
 
   return (
-    <div
-      className="h-screen w-full flex items-center justify-center bg-main_black px-5 md:px-10"
-      style={{
-        backgroundImage: `url(${Noise_Image})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="w-[1300px] h-fit bg-main_black border-2 border-gold-500 flex">
-        {/* Left side - Login form */}
-        <div className="w-full md:w-1/2 px-4 md:px-10 py-8 flex flex-col">
-          <img
-            src={small_logo}
-            alt="smalllogo"
-            loading="lazy"
-            className="w-20 h-[76px] mx-auto mt-6"
+    <section className="flex h-screen relative">
+      {/* Left Side - Form */}
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-main_black text-white px-6 md:px-10 lg:px-16 relative">
+        <div className="text-center md:text-left">
+          <h1 className="text-xl md:text-[24px] lg:text-[36px] uppercase font-restora font-bold mb-2 leading-[30px] md:leading-[35px] lg:leading-[45px]">
+            Welcome to The Chef Show!
+          </h1>
+          <p className="text-sm md:text-[16px] capitalize">
+            Enjoy exclusive services when you sign in.
+          </p>
+          <div className="border border-[#525252] my-6 md:my-10" />
+        </div>
+
+        <form
+          className="flex flex-col gap-6 w-full max-w-[536px]"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          {/* Email input */}
+          <CustomInput
+            label="Email or phone number"
+            type="text"
+            placeholder="Enter your Email"
+            register={register("email")}
+            error={errors.email?.message}
           />
 
-          {/* Form */}
-          <h1 className="text-2xl md:text-[40px] font-restora_light uppercase mt-6 text-center font-bold">
-            Login to your account
-          </h1>
-          <h3 className="text-sm md:text-base font-jakarta capitalize my-2 text-center mb-10 ">
-            Your Gateway to Exclusive Deals and Offers!
-          </h3>
-          <form onSubmit={handleSubmit} className="space-y-4 mt-4">
-            {/* Email */}
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-base capitalize font-normal mb-1 text-white"
-              >
-                Email or phone number
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter Your Email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-main_black border border-gold-500 outline-none placeholder:text-sm text-white placeholder:font-jakarta placeholder:text-gray-500"
-                required
-              />
-            </div>
+          {/* Password input */}
+          <CustomInput
+            label="Password"
+            type={showPassword ? "text" : "password"}
+            placeholder="Enter your Password"
+            showPasswordToggle
+            register={register("password")}
+            error={errors.password?.message}
+          />
 
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-base capitalize font-normal mb-1 text-white"
-              >
-                Password
-              </label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter Your Password"
-                value={formData.password}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-main_black border border-gold-500 outline-none placeholder:text-sm text-white placeholder:font-jakarta placeholder:text-gray-500"
-                required
-              />
-            </div>
-            {/* Remmber Me  */}
-            <div className="flex items-center justify-between">
-              <CustomCheckbox label="Remember me" />
-              <Link to="/" className="text-gold-500 text-base">
-                Forgot Password?
-              </Link>
-            </div>
-            {/* Submit Button */}
-            <div>
-              <button
-                type="submit"
-                className="w-full mt-6 text-xl bg-gold-500 py-3 font-medium font-jakarta capitalize text-black"
-              >
-                Login
-              </button>
-            </div>
-          </form>
+          <Link
+            to="/forgot-password"
+            className="text-gold-500 text-right font-semibold text-[16px]"
+          >
+            Forgot Password?
+          </Link>
 
-          <p className="text-base text-white mt-6 text-center">
-            Don’t have an account?{" "}
-            <Link to="/signup" className="text-gold-500 font-semibold">
+          <button
+            type="submit"
+            className="bg-gold-500 text-black font-medium text-[20px] flex items-center justify-center h-[58px]"
+          >
+            {isSubmitting ? "Logging in..." : "Login"}
+          </button>
+
+          <p className="font-medium text-[16px] text-white text-center">
+            Don't have an account?{" "}
+            <Link to="/signup" className="text-gold-500">
               Create an account
             </Link>
           </p>
+        </form>
+
+        <OverlayImages bgImg={landing} />
+      </div>
+
+      {/* Right Side - Image & Text (Hidden on Small Screens) */}
+      <div className="w-1/2 relative hidden md:block">
+        {/* Background Image */}
+        <img
+          src={Hero}
+          alt="Background"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+
+        {/* Text Content */}
+        <div className="absolute inset-0 flex flex-col px-8 mt-16">
+          <h2 className="font-restora_light uppercase text-white text-2xl md:text-[35px] lg:text-[56px] font-normal leading-[40px] md:leading-[50px] lg:leading-[70px]">
+            Taste <br />
+            the Experience <br />
+            <span className="text-gold-500">log in now!</span>
+          </h2>
         </div>
 
-        {/* Right side - Background image & Card */}
-        <div className="hidden md:block w-1/2 bg-gold-500 text-white relative p-6"></div>
+        {/* Auth Icon */}
+        <img
+          src={small_logo}
+          alt="Auth Icon"
+          className="absolute bottom-10 right-12 w-20 h-w-20 z-10"
+        />
       </div>
-    </div>
+    </section>
   );
 };
 
