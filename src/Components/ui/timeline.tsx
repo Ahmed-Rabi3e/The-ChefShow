@@ -39,7 +39,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           Our Culinary
           <MorphingText
             texts={texts}
-            className="text-sm md:text-[48px]  !inline font-restora_light !italic capitalize"
+            className="text-xl md:text-[48px]  !inline font-restora_light !italic capitalize"
           />
         </h2>
         <p className="text-white text-sm md:text-base max-w-md">
