@@ -63,16 +63,16 @@ const Header: React.FC = () => {
         {/* Reservation Button */}
         <div className="flex items-center gap-2">
           <NavLink
-            to="/reservation"
-            className="hidden uppercase text-sm md:block bg-gold-500 px-4 py-2 text-white font-normal"
-          >
-            Reservation
-          </NavLink>
-          <NavLink
             to="/login"
-            className="hidden uppercase text-sm md:block bg-transparent border border-gold-500 px-4 py-2 text-white font-normal"
+            className="hidden uppercase text-sm md:block bg-transparent border border-gold-500 hover:bg-gold-500 px-4 py-2 text-white font-normal"
           >
             Login
+          </NavLink>
+          <NavLink
+            to="/reservation"
+            className="hidden uppercase text-sm md:block bg-gold-500 hover:bg-gold-500/50 px-4 py-2 text-white font-normal"
+          >
+            Reservation
           </NavLink>
         </div>
 
